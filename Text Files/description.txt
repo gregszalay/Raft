@@ -1,0 +1,26 @@
+Ez egy Raft nevű játék megvalósítása Java nyelven.
+A játék egy téglalap alakú pályán játszódik, a tengeren. A játék célja, hogy karakterünk túlélje ezt a megpróbáltatást. 
+Egyszerre egy cselekvést végezhetünk, melyek az alábbiak lehetnek: léphetünk egyet jobbra, balra, fel, le, vagy átlósan, ihatunk, ehetünk, építhetünk, horgászhatunk, nyersanyagot gyűjthetünk be. A játékot akkor nyerjük meg, ha sikerül túlélni 1500 cselekvést.
+Kezdetben (a pálya közepén) egy 2x2-es tutajunk van, ezt tudjuk a későbbiekben bővíteni, ehhez nyersanyagokat kell gyűjteni. A nyersanyagok folyamatosan érkeznek a pálya teteje felől (minden cselekvésünkkor egy mezőt haladnak a pályán lefele, a pálya tetején újak keletkeznek). Minden cselekvéssel véletlenszerű mennyiségű (0 és 3 között) új nyersanyag keletkezik a pálya tetején, és az is elkezd lefele haladni. Ezeket felszedhetjük, ha legfeljebb egy távolságra vannak a karakterünktől.
+Az alábbi nyersanyagok fordulnak elő:
+deszka 
+levél 
+hulladék 
+hordó: ebben 5 db véletlenszerű nyersanyag helyezkedik el az alábbiak közül: deszka, levél, hulladék, burgonya (egy nyersanyag többször is előfordulhat).
+A nyersanyagok felhasználásával tudjuk a tutajunkat bővíteni, illetve arra építeni:
+Terület-bővítés: 2 deszka + 2 levél			
+Kibővíti tutajunkat egy 1x1-es területtel(csak szabad területre lehelyezhető, építéskor 1 távolságra kell lennünk tőle).
+Lándzsa:         4 deszka + 4 levél + 4 hulladék
+Ha készítettünk lándzsát, meg tudjuk támadni a cápát (lásd: később).
+Tűzhely:         2 deszka + 4 levél + 3 hulladék
+Főzni tudunk rajta (burgonyát vagy halat).
+Víztisztító:     2 levél + 4 hulladék
+A tengervizet ihatóvá alakítja.
+Háló:            2 deszka + 6 levél
+Egy, tutajjal szomszédos területre rakhatjuk (mint a bővítést), begyűjti automatikusan az oda érkező nyersanyagokat.
+A játék során bármekkora területet kiépíthetünk magunknak, ezekre tudunk csak építkezni. A tűzhely és víztisztító is 1-1 területet foglal el, ezekből bármennyit lehelyezhetünk.
+Karakterünknek szüksége van folyadékra és ételre. Az éhségét és szomjúságát egy 0 és 100 közötti szám jelenti. Kezdetben 100-ról indulunk (tehát egyáltalán nem vagyunk sem éhesek, sem szomjasak), ez minden cselekvéssel csökken 1-gyel. Ha valamelyik eléri a 0-t, a játéknak vége, vesztettünk.
+Szomjúságunkat víz ivásával tudjuk enyhíteni. Minden víztisztító 25 cselekvés alatt termel 1 pohár vizet automatikusan. Ezt arra a mezőre lépve ihatjuk meg, ahol a víztisztító van, ezzel a szomjúságot reprezentáló érték 40-nel nő.
+Éhségünket burgonyával és hallal csillapíthatjuk. Halat fogni úgy tudunk, hogy beállunk a vízbe. 1 horgászat alkalmával (1 cselekvés) 1/4 eséllyel fogunk halat. Burgonyát a hordókból tudunk szerezni. Mind a halat, mind a burgonyát meg kell főzni, ehhez rá kell helyezni őket a
+tűzhelyre, ami 25 cselekvés alatt készíti el, azután megehetjük őket, ekkor az éhségünket reprezentáló érték 60-nal nő.
+Karakterünkkel beléphetünk a vízbe, ám ekkor veszélybe kerülünk, ugyanis a tutajunk körül egy cápa úszkál (minden cselekvésünkkel 1 mezőt tesz meg). Ha azonban bemegyünk a vízbe, akkor azonnal elindul felénk (minden cselekvéssel (lépés vagy horgászat) egy mezőt). Ha a cápa és közöttünk van a tutajunk egy része, akkor a cápa áthalad a tutaj alatt. Ha elkap, akkor a játék véget ér, vesztettünk. Ha van lándzsánk, akkor ki tudjuk védekezni a támadását, de ekkor is csak 5 cselekvés erejéig, tehát ez idő alatt vissza kell érnünk a tutajra. Ha visszalépünk a tutajra, akkor újra biztonságban vagyunk, ekkor a cápa ismét a tutajunk körül kezd el mozogni (ha épp a tutaj alatt van, akkor kijön onnan). A mozgásának nem muszáj szabályosnak lennie, de ügyeljünk rá, hogy ne távolodjon el túlságosan a tutajunktól.

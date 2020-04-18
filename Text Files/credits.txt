@@ -1,0 +1,28 @@
+﻿//Main idea://
+https://raft.itch.io/raft
+https://www.inf.u-szeged.hu/en
+
+//Inspiration for the technical implementations used://
+Eudy Contreras: https://gist.github.com/EudyContreras/a3ad63067e7e16ed7cf580eb992b4a60
+javacraving: https://www.youtube.com/playlist?list=PL4wcbt63yAbdtY-GOeuRjIePfUsukSJZ9
+Andras Kicsi: https://www.youtube.com/playlist?list=PLGlj9VbLRrjBBWF0GL7eVY8_jK_AZ3ZXK
+https://stackoverflow.com/questions/28287398/what-is-the-preferred-way-of-getting-the-frame-rate-of-a-javafx
+
+//Image Resources://
+https://www.kenney.nl/assets/ui-pack-rpg-expansion
+https://craftpix.net/freebies/island-boy-character-free-sprite/
+https://www.kenney.nl/assets/fantasy-town-kit
+https://www.kenney.nl/assets/food-kit
+https://craftpix.net/freebies/island-game-gui/
+https://ibbyskibby.files.wordpress.com/2013/06/1-pre-dive-water-view.jpg
+https://ya-webdesign.com/explore/water-glass-icon-png/
+https://2.bp.blogspot.com/-8emqSJoWlvo/VAM_PPUXI1I/AAAAAAAABf0/fT7fvrRckiQ/s1600/Captura.PNG
+https://www.pngitem.com/pimgs/m/192-1929891_paan-leaf-png-transparent-png.pngű
+https://www.kindpng.com/picc/m/33-333845_crushed-coke-can-hd-png-download.png
+https://craftpix.net/freebies/free-underwater-world-2d-game-objects/
+https://www.kenney.nl/assets/ui-pack
+https://www.kenney.nl/assets/nature-kit
+https://ya-webdesign.com/image/drawing-shark-simple/2244279.html
+https://pngimage.net/%d0%bf%d0%bb%d0%be%d1%82-png-4/
+https://www.cleanpng.com/png-the-speartip-weapon-google-classroom-2467794/
+https://medium.com/punjabi-tadka/boiling-potatoes-the-simple-way-4c0320184319
